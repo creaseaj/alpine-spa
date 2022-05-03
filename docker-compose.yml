@@ -1,0 +1,13 @@
+services:
+  web:
+    build: frontend/.
+    ports:
+      - "80:1234"
+    volumes:
+      - ./frontend:/frontend
+  api:
+    build: backend/.
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./backend:/backend
